@@ -1,0 +1,19 @@
+name: espeak_cli
+description: CLI tools for espeak
+version: 0.1.0
+repository: https://github.com/gaumoe/espeak
+topics:
+  - tts
+  - phoneme
+  - cli
+
+environment:
+  sdk: ^3.10.0
+
+resolution: workspace
+
+dependencies:
+  espeak: ^0.1.0
+
+executables:
+  espeakc: compile

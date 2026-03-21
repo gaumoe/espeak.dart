@@ -1,0 +1,9 @@
+name: espeak_mono
+publish_to: none
+
+environment:
+  sdk: ^3.10.0
+
+workspace:
+  - packages/espeak
+  - packages/espeak_cli

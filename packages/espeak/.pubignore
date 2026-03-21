@@ -1,0 +1,33 @@
+# Exclude everything from espeak-ng except what we compile
+native/espeak-ng/android/
+native/espeak-ng/cmake/
+native/espeak-ng/data/
+native/espeak-ng/dictsource/
+native/espeak-ng/docs/
+native/espeak-ng/emscripten/
+native/espeak-ng/fastlane/
+native/espeak-ng/nano/
+native/espeak-ng/phsource/
+native/espeak-ng/tests/
+native/espeak-ng/tools/
+native/espeak-ng/vim/
+native/espeak-ng/_layouts/
+native/espeak-ng/src/windows/
+native/espeak-ng/src/speechPlayer/
+native/espeak-ng/src/compat/
+native/espeak-ng/src/espeak-ng.c
+native/espeak-ng/.git*
+native/espeak-ng/*.md
+native/espeak-ng/*.yml
+native/espeak-ng/*.toml
+native/espeak-ng/Makefile*
+native/espeak-ng/configure*
+native/espeak-ng/autogen.sh
+native/espeak-ng/m4/
+native/espeak-ng/COPYING*
+
+# Dev files
+test/
+tool/
+.dart_tool/
+pubspec.lock
