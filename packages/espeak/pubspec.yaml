@@ -1,6 +1,6 @@
 name: espeak
 description: Text to phoneme conversion, powered by espeak-ng.
-version: 0.1.2
+version: 0.1.3
 repository: https://github.com/gaumoe/espeak
 topics:
   - tts

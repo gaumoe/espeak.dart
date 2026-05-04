@@ -1,4 +1,4 @@
-## 0.1.2
+## 0.1.3
 
 - Fixed Apple native builds by defining little-endian conversion macros.
 - Fixed espeak-ng data paths longer than 160 characters on Apple platforms.
