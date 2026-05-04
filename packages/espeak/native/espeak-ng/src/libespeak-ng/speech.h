@@ -66,6 +66,9 @@ extern "C"
 #if defined(__linux__) // Linux
 #  include <linux/limits.h>
 #  define N_PATH_HOME_DEF  PATH_MAX
+#elif defined(__APPLE__)
+#  include <limits.h>
+#  define N_PATH_HOME_DEF  PATH_MAX
 #else
 #  define N_PATH_HOME_DEF  160
 #endif

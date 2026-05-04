@@ -5,6 +5,7 @@
 
 // ignore_for_file: depend_on_referenced_packages
 
+import 'package:code_assets/code_assets.dart';
 import 'package:hooks/hooks.dart';
 import 'package:native_toolchain_c/native_toolchain_c.dart';
 
@@ -60,7 +61,15 @@ void main(List<String> args) async {
         'native/espeak-ng/src/include/compat', // cross-platform shims (endian.h, unistd.h, etc.)
         'native/espeak-ng/src/ucd-tools/src/include',
       ],
+      flags: ['-Wno-deprecated-declarations'],
+      libraries: _libraries(input),
       language: Language.c,
     ).run(input: input, output: output);
   });
+}
+
+List<String> _libraries(BuildInput input) {
+  if (!input.config.buildCodeAssets) return const [];
+  if (input.config.code.targetOS == OS.windows) return const [];
+  return const ['m'];
 }

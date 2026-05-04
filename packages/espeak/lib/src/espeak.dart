@@ -9,6 +9,7 @@ const _clauseComma = 0x00001000;
 const _clauseQuestion = 0x00002000;
 const _clauseExclamation = 0x00003000;
 const _clauseIntonationMask = 0x00007000;
+const _initializeDontExit = 0x8000;
 
 /// Text-to-phoneme engine powered by espeak-ng.
 ///
@@ -36,7 +37,7 @@ class Espeak implements Finalizable {
         espeak_AUDIO_OUTPUT.AUDIO_OUTPUT_RETRIEVAL,
         0,
         pathPtr,
-        0,
+        _initializeDontExit,
       );
       if (result == -1) {
         throw StateError('espeak_Initialize failed (data path: $dataPath)');

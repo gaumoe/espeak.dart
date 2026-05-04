@@ -13,3 +13,26 @@
 #define _CRT_SECURE_NO_WARNINGS
 #define _CRT_NONSTDC_NO_DEPRECATE
 #endif
+
+#if defined(__APPLE__)
+#include <libkern/OSByteOrder.h>
+
+#ifndef htole16
+#define htole16(x) OSSwapHostToLittleInt16(x)
+#endif
+#ifndef le16toh
+#define le16toh(x) OSSwapLittleToHostInt16(x)
+#endif
+#ifndef htole32
+#define htole32(x) OSSwapHostToLittleInt32(x)
+#endif
+#ifndef le32toh
+#define le32toh(x) OSSwapLittleToHostInt32(x)
+#endif
+#ifndef htole64
+#define htole64(x) OSSwapHostToLittleInt64(x)
+#endif
+#ifndef le64toh
+#define le64toh(x) OSSwapLittleToHostInt64(x)
+#endif
+#endif
